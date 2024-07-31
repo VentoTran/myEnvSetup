@@ -18,6 +18,9 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
+eval "$(fzf --zsh)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Add in Powerlevel10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
@@ -76,10 +79,9 @@ alias vim='nvim'
 alias c='clear'
 
 # Shell integrations
-eval "$(fzf --zsh)"
+
 eval "$(zoxide init --cmd cdz zsh)"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
 
